@@ -1,0 +1,42 @@
+//- index.pug
+//- pug -w ./ -o ./
+// Quadratic Formula Calculator using Python
+// ax^2 + bx + c = 0
+// quadratic formula for finding x: (-b +- sqrt(b^2 - 4ac) / 2a)
+
+doctype html
+
+html
+  head
+    style
+      include ./style.css
+    script
+      include ./script.js
+
+  body
+    h1 #[a(href="https://www.spdm.dev/projects/cts") Back]
+    .factor
+      h1 Complete the Square
+      label.inputtext input: ax^2 + bx = n
+      label.inputtext output: (x + y)^2 = n
+      br
+      br
+      form
+        //- input(type="number").input#fa
+        label.inputtext x^2 + 
+
+        input(type="number").input#fb
+        label.inputtext x = 
+
+        input(type="number").input#fc
+        label.inputtext
+
+        br
+        br
+
+      button(onclick="factor()").input.inputtext Submit
+
+      .answers
+        h2#fanswer1 X Value 1
+        h2#fanswer2 X Value 2
+        h2#fanswer3 X Value 3

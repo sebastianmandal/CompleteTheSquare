@@ -1,0 +1,70 @@
+<!-- Quadratic Formula Calculator using Python--><!-- ax^2 + bx + c = 0--><!-- quadratic formula for finding x: (-b +- sqrt(b^2 - 4ac) / 2a)--><!DOCTYPE html><html><head><style>html {
+  width: 100%;
+}
+
+body {
+  background-color: #5a5dff;
+  text-align: center;
+  font-family: 'Roboto', Arial;
+  font-weight: light;
+}
+
+.input {
+  color: white;
+  background-color: rgb(0, 2, 141);
+  width: 200px;
+  height: 50px;
+}
+
+.inputtext {
+  font-size: 20px;
+}
+
+.submit {
+  color: white;
+  background-color: rgb(0, 2, 141);
+  width: 200px;
+  height: 50px;
+}
+
+.factor {
+  padding: 40px;
+  border: 1px solid #ffffff;
+}
+
+.expand {
+  padding: 40px;
+  border: 1px solid #ffffff;
+  margin-top: 30px;
+}</style><script>/*jshint esversion: 6 */
+
+/// = OUT TAKES
+// = COMMENT
+
+function factor() {
+
+  /// var a = parseFloat(document.getElementById("fa").value);
+  var a = parseFloat(document.getElementById("fb").value);
+  var b = a / 2;
+  var c = parseFloat(document.getElementById("fc").value);
+
+  var answer1 = findxpos(b, c);
+  var answer1 = document.getElementById("fanswer1").innerHTML = ("x = " + answer1);
+
+  var answer2 = findxneg(b, c);
+  var answer2 = document.getElementById("fanswer2").innerHTML = ("x = " + answer2);
+}
+
+function findxpos(b, c) {
+  var c1 = c + (b * b);
+  var c2 = Math.sqrt(c1);
+  var c3 = -b + c2;
+  return c3;
+}
+
+function findxneg(b, c) {
+  var c1 = c + (b * b);
+  var c2 = Math.sqrt(c1);
+  var c3 = -b - c2;
+  return c3;
+}</script></head><body><h1><a href="https://www.spdm.dev/projects/cts">Back</a></h1><div class="factor"><h1>Complete the Square</h1><label class="inputtext">input: ax^2 + bx = n</label><label class="inputtext">output: (x + y)^2 = n</label><br><br><form><label class="inputtext">x^2 + </label><input class="input" type="number" id="fb"><label class="inputtext">x = </label><input class="input" type="number" id="fc"><label class="inputtext"></label><br><br></form><button class="input inputtext" onclick="factor()">Submit</button><div class="answers"><h2 id="fanswer1">X Value 1</h2><h2 id="fanswer2">X Value 2</h2><h2 id="fanswer3">X Value 3</h2></div></div></body></html>
