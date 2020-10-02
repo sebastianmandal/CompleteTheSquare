@@ -5,10 +5,15 @@
 
 function factor() {
 
-  /// var a = parseFloat(document.getElementById("fa").value);
-  var a = parseFloat(document.getElementById("fb").value);
-  var b = a / 2;
+  / var a = parseFloat(document.getElementById("fa").value);
+  var b = parseFloat(document.getElementById("fb").value);
+  var b = b / 2;
   var c = parseFloat(document.getElementById("fc").value);
+
+  if (a != 1) {
+    b = b / a;
+    c = c / a;
+  }
 
   var answer1 = findxpos(b, c);
   var answer1 = document.getElementById("fanswer1").innerHTML = ("x = " + answer1);
